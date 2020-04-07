@@ -8,6 +8,7 @@ public class helloworld : MonoBehaviour
     void Start()
     {
         print("Hello world!");
+         print("Hello NIC");
     }
 
     // Update is called once per frame
