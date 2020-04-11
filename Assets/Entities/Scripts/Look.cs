@@ -10,10 +10,8 @@ public class Look : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Voltear a ver algo
-        transform.LookAt(target);
-
-        //Mover en dirección adelante
-        //transform.Translate(transform.forward*1*Time.deltaTime,Space.World);
+        Vector2 direction = new Vector2(target.position.x - transform.position.x, target.position.y - transform.position.y);
+        float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        this.transform.eulerAngles = new Vector3(0, 0, rotation);
     }
 }
