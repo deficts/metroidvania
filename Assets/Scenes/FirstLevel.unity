@@ -30299,6 +30299,12 @@ Transform:
   m_Father: {fileID: 670623346}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &433047983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3158376992399576744, guid: b7e2aa1735a7e4faf897a9444359c402,
+    type: 3}
+  m_PrefabInstance: {fileID: 1736461957}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &670623343
 GameObject:
   m_ObjectHideFlags: 0
@@ -30337,7 +30343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   texto: {fileID: 1313819554}
-  puntuacion: 100
+  puntuacion: 1000
   platformLayer:
     serializedVersion: 2
     m_Bits: 1024
@@ -30743,6 +30749,12 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &782329215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3158376992399576744, guid: b7e2aa1735a7e4faf897a9444359c402,
+    type: 3}
+  m_PrefabInstance: {fileID: 1239355571}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &805006866
 GameObject:
   m_ObjectHideFlags: 0
@@ -30800,6 +30812,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemigoEstatico1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158376992399576744, guid: b7e2aa1735a7e4faf897a9444359c402,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3158376992399576747, guid: b7e2aa1735a7e4faf897a9444359c402,
         type: 3}
@@ -30907,7 +30924,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451c3d348b5d1423692891da32ac8340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemigos: []
+  enemigos:
+  - {fileID: 782329215}
+  - {fileID: 1520583228}
+  - {fileID: 433047983}
+  - {fileID: 1911956831}
+  - {fileID: 1448098000}
   puertas: {fileID: 779205698}
 --- !u!61 &892945066
 BoxCollider2D:
@@ -30919,7 +30941,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.05831909, y: 0.19439316}
@@ -31477,6 +31499,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemigoEstatico1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3158376992399576744, guid: b7e2aa1735a7e4faf897a9444359c402,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3158376992399576747, guid: b7e2aa1735a7e4faf897a9444359c402,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31997,6 +32024,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemigoEstatico1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158376992399576744, guid: b7e2aa1735a7e4faf897a9444359c402,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3158376992399576747, guid: b7e2aa1735a7e4faf897a9444359c402,
         type: 3}
@@ -33102,6 +33134,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemigoEstatico1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3158376992399576744, guid: b7e2aa1735a7e4faf897a9444359c402,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3158376992399576747, guid: b7e2aa1735a7e4faf897a9444359c402,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33194,6 +33231,18 @@ Transform:
   m_Father: {fileID: 1711590552}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.15}
+--- !u!1 &1448098000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3158376992399576744, guid: b7e2aa1735a7e4faf897a9444359c402,
+    type: 3}
+  m_PrefabInstance: {fileID: 1030592805}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1520583228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3158376992399576744, guid: b7e2aa1735a7e4faf897a9444359c402,
+    type: 3}
+  m_PrefabInstance: {fileID: 810135466}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1572565727
 GameObject:
   m_ObjectHideFlags: 0
@@ -33688,6 +33737,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemigoEstatico1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3158376992399576744, guid: b7e2aa1735a7e4faf897a9444359c402,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3158376992399576747, guid: b7e2aa1735a7e4faf897a9444359c402,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -34093,6 +34147,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fd9b34d22a934b82bba95fc35c5f569, type: 3}
+--- !u!1 &1911956831 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3158376992399576744, guid: b7e2aa1735a7e4faf897a9444359c402,
+    type: 3}
+  m_PrefabInstance: {fileID: 1340959930}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2006181741
 GameObject:
   m_ObjectHideFlags: 0
