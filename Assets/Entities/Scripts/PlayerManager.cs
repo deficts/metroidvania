@@ -14,12 +14,18 @@ public class PlayerManager : MonoBehaviour
     public int puntuacion = 100;
     private Animator animator;
     [SerializeField] LayerMask platformLayer;
+    public Image damage;
+    public float flash=10f;
+    public Color fColor=new Color(1f,0f,0f,0.1f);
+    bool damaged;
 
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
         texto.text = "VIDA: "+puntuacion;
         animator = GetComponent<Animator>();
+        damage.color=Color.clear;
+
     }
 
     void Update()
@@ -33,11 +39,15 @@ public class PlayerManager : MonoBehaviour
             rb.AddForce(Vector2.up * 250);
             animator.SetBool("IsJumping", true);
         }
-
-
-
         MecanismoVida(puntuacion);              //SIEMPRE LO REVISA
         TurnPlayer();
+
+        if(damaged){
+            damage.color=fColor;
+        }else{
+            damage.color=Color.Lerp(damage.color,Color.clear,flash*Time.deltaTime);
+        }
+        damaged=false;
     }
 
     public void FixedUpdate(){
@@ -53,12 +63,15 @@ public class PlayerManager : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Proyectil"))
         {            //MECANISMO DE VIDA
+            damaged=true;
             puntuacion -= 10 ;
+        
         }
 
         if (collision.gameObject.CompareTag("Enemigo"))
         {                   //MECANISMO DE VIDA
             puntuacion -= 20;
+            damaged=true;
         }
 
         if (collision.gameObject.CompareTag("Suelo"))
