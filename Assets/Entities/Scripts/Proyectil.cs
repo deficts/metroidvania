@@ -10,7 +10,7 @@ public class Proyectil : MonoBehaviour
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
-        rb.AddForce(transform.right*11,ForceMode2D.Impulse);
+        rb.AddForce(transform.right*20,ForceMode2D.Impulse);
         Destroy(gameObject,3);
 
     }

@@ -10,6 +10,7 @@ public class Enemigo : MonoBehaviour
     private IEnumerator disparo;
     public float targetTime = 2.0f;
     bool bandera=true;
+    public int life = 3;
 
     
     void Start()
@@ -18,9 +19,7 @@ public class Enemigo : MonoBehaviour
     }
     void Update()
     {
-         targetTime = targetTime-Time.deltaTime;
-       
-        
+       targetTime = targetTime-Time.deltaTime; 
        if (targetTime <= 0.0f)
         {   
             bandera=false;
@@ -30,6 +29,10 @@ public class Enemigo : MonoBehaviour
             }
             
         }
+        if (life <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     IEnumerator Disparar(){
@@ -38,6 +41,14 @@ public class Enemigo : MonoBehaviour
             Instantiate(proyectil,referencia.position,referencia.rotation);
             yield return new WaitForSeconds(.1f);
             StopCoroutine(disparo); 
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        print("golpe");
+        if (collision.gameObject.CompareTag("ProyectilPerrito"))
+        {
+            life -= 1;
         }
     }
 }

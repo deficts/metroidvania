@@ -10,6 +10,7 @@ TagManager:
   - Malo
   - Suelo
   - Melee
+  - ProyectilPerrito
   layers:
   - Default
   - TransparentFX
@@ -22,8 +23,8 @@ TagManager:
   - Proyectiles
   - Enemigos
   - Plataformas
-  - 
-  - 
+  - Suelo
+  - ProyectilPerrito
   - 
   - 
   - 
