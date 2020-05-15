@@ -1,28 +1,52 @@
 fileFormatVersion: 2
-guid: b58e6f296e1250b44a9bc445ba2a5e37
+guid: 7753f5df03a683f498a2b1103bd5d137
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4659112463564760050
-    second: virusRojos_0
+      213: -2451347711212978669
+    second: Mauimalo_0
   - first:
-      213: 5657468152651860392
-    second: virusRojos_1
+      213: -1559332686550486503
+    second: Mauimalo_1
   - first:
-      213: 4596013468571389807
-    second: virusRojos_2
+      213: 3950902789753316267
+    second: Mauimalo_2
   - first:
-      213: 8870731984039073909
-    second: virusRojos_3
+      213: 6006959576383215497
+    second: Mauimalo_3
   - first:
-      213: -2346032366160614727
-    second: virusRojos_4
+      213: 4716520090650964490
+    second: Mauimalo_4
   - first:
-      213: -1753964998517841044
-    second: virusRojos_5
+      213: -2168383134294827454
+    second: Mauimalo_5
   - first:
-      213: -1372592645326124456
-    second: virusRojos_0
+      213: -8157847405392340803
+    second: Mauimalo_6
+  - first:
+      213: -2039240792234323272
+    second: Mauimalo_7
+  - first:
+      213: -6876095652822834110
+    second: Mauimalo_8
+  - first:
+      213: -790035703865540119
+    second: Mauimalo_9
+  - first:
+      213: -5074626559482010067
+    second: Mauimalo_10
+  - first:
+      213: -633318629938604510
+    second: Mauimalo_11
+  - first:
+      213: 8873548293982600450
+    second: Mauimalo_12
+  - first:
+      213: -5247328171285549355
+    second: Mauimalo_13
+  - first:
+      213: -5167776250023579668
+    second: Mauimalo_14
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -107,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: virusRojos_0
+      name: Mauimalo_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 350
-        width: 194
-        height: 200
+        x: 33
+        y: 314
+        width: 197
+        height: 164
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85ac50ae24293fce0800000000000000
-      internalID: -1372592645326124456
+      spriteID: ba3a85d872d64d630800000000000000
+      internalID: 3950902789753316267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: virusRojos_1
+      name: Mauimalo_4
       rect:
         serializedVersion: 2
-        x: 239
-        y: 349
-        width: 198
-        height: 200
+        x: 309
+        y: 312
+        width: 197
+        height: 164
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a946ee6f4d538e40800000000000000
-      internalID: 5657468152651860392
+      spriteID: a027e338802747140800000000000000
+      internalID: 4716520090650964490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: virusRojos_2
+      name: Mauimalo_7
       rect:
         serializedVersion: 2
-        x: 444
-        y: 345
-        width: 205
-        height: 210
+        x: 576
+        y: 312
+        width: 197
+        height: 164
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,29 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6fcb1126e158cf30800000000000000
-      internalID: 4596013468571389807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: virusRojos_3
-      rect:
-        serializedVersion: 2
-        x: 656
-        y: 342
-        width: 187
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57858568dbb2b1b70800000000000000
-      internalID: 8870731984039073909
+      spriteID: 8b21367cd4923b3e0800000000000000
+      internalID: -2039240792234323272
       vertices: []
       indices: 
       edges: []
