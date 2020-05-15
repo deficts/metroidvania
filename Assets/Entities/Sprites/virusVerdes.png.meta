@@ -1,28 +1,43 @@
 fileFormatVersion: 2
-guid: b58e6f296e1250b44a9bc445ba2a5e37
+guid: b792f6c9ab287a14486ad4c455aaad9f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4659112463564760050
-    second: virusRojos_0
+      213: 21154303406172293
+    second: virusVerdes_0
   - first:
-      213: 5657468152651860392
-    second: virusRojos_1
+      213: 4222424808293303957
+    second: virusVerdes_1
   - first:
-      213: 4596013468571389807
-    second: virusRojos_2
+      213: 2910301966009212357
+    second: virusVerdes_2
   - first:
-      213: 8870731984039073909
-    second: virusRojos_3
+      213: -737906570887345799
+    second: virusVerdes_3
   - first:
-      213: -2346032366160614727
-    second: virusRojos_4
+      213: -2954719546605137417
+    second: virusVerdes_4
   - first:
-      213: -1753964998517841044
-    second: virusRojos_5
+      213: 3060828867966538570
+    second: virusVerdes_5
   - first:
-      213: -1372592645326124456
-    second: virusRojos_0
+      213: 1210650276812844489
+    second: virusVerdes_6
+  - first:
+      213: 1347997890034017130
+    second: virusVerdes_7
+  - first:
+      213: -4083680831290354376
+    second: virusVerdes_8
+  - first:
+      213: -5573724377628770018
+    second: virusVerdes_9
+  - first:
+      213: -6397576159103879770
+    second: virusVerdes_10
+  - first:
+      213: 6634524261081946293
+    second: virusVerdes_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -107,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: virusRojos_0
+      name: virusVerdes_0
       rect:
         serializedVersion: 2
         x: 32
-        y: 350
-        width: 194
-        height: 200
+        y: 318
+        width: 196
+        height: 195
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +136,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85ac50ae24293fce0800000000000000
-      internalID: -1372592645326124456
+      spriteID: 588eef31ab72b4000800000000000000
+      internalID: 21154303406172293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: virusRojos_1
+      name: virusVerdes_8
       rect:
         serializedVersion: 2
-        x: 239
-        y: 349
+        x: 243
+        y: 316
+        width: 197
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835ddd29be9d357c0800000000000000
+      internalID: -4083680831290354376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: virusVerdes_1
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 307
+        width: 216
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5968e15edf0199a30800000000000000
+      internalID: 4222424808293303957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: virusVerdes_2
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 304
         width: 198
-        height: 200
+        height: 215
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,50 +199,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a946ee6f4d538e40800000000000000
-      internalID: 5657468152651860392
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: virusRojos_2
-      rect:
-        serializedVersion: 2
-        x: 444
-        y: 345
-        width: 205
-        height: 210
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6fcb1126e158cf30800000000000000
-      internalID: 4596013468571389807
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: virusRojos_3
-      rect:
-        serializedVersion: 2
-        x: 656
-        y: 342
-        width: 187
-        height: 212
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57858568dbb2b1b70800000000000000
-      internalID: 8870731984039073909
+      spriteID: 5cd9919f738736820800000000000000
+      internalID: 2910301966009212357
       vertices: []
       indices: 
       edges: []

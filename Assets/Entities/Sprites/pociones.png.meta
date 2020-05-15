@@ -1,28 +1,103 @@
 fileFormatVersion: 2
-guid: b58e6f296e1250b44a9bc445ba2a5e37
+guid: 1ae99e4ea61f3e44387456e7f9cea978
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4659112463564760050
-    second: virusRojos_0
+      213: 8696497083489231585
+    second: pociones_0
   - first:
-      213: 5657468152651860392
-    second: virusRojos_1
+      213: -1613931333893761517
+    second: pociones_1
   - first:
-      213: 4596013468571389807
-    second: virusRojos_2
+      213: -9121826022886279153
+    second: pociones_2
   - first:
-      213: 8870731984039073909
-    second: virusRojos_3
+      213: -6065659723586969908
+    second: pociones_3
   - first:
-      213: -2346032366160614727
-    second: virusRojos_4
+      213: 3463729126340954337
+    second: pociones_4
   - first:
-      213: -1753964998517841044
-    second: virusRojos_5
+      213: 6054578647707659746
+    second: pociones_5
   - first:
-      213: -1372592645326124456
-    second: virusRojos_0
+      213: -7160051454064397321
+    second: pociones_6
+  - first:
+      213: 4224946941329112100
+    second: pociones_7
+  - first:
+      213: 6375876165541450438
+    second: pociones_8
+  - first:
+      213: 5472016800187998661
+    second: pociones_9
+  - first:
+      213: 2998283605912384891
+    second: pociones_10
+  - first:
+      213: 3531348587451777223
+    second: pociones_11
+  - first:
+      213: -9206713431263122116
+    second: pociones_12
+  - first:
+      213: 1309515743604844620
+    second: pociones_13
+  - first:
+      213: 8597354533098063172
+    second: pociones_14
+  - first:
+      213: -9183858601210787865
+    second: pociones_15
+  - first:
+      213: 4929969587504569521
+    second: pociones_16
+  - first:
+      213: 9165861215212994978
+    second: pociones_17
+  - first:
+      213: -524502665981770142
+    second: pociones_18
+  - first:
+      213: -5688069559774732543
+    second: pociones_19
+  - first:
+      213: -1014485735565448286
+    second: pociones_20
+  - first:
+      213: 5556891607006495571
+    second: pociones_21
+  - first:
+      213: -2178178257598247439
+    second: pociones_22
+  - first:
+      213: 1161764754397511629
+    second: pociones_23
+  - first:
+      213: -8080575310417345321
+    second: pociones_24
+  - first:
+      213: 8292725041034650915
+    second: pociones_25
+  - first:
+      213: 2384957362074896291
+    second: pociones_26
+  - first:
+      213: -4903189122517444975
+    second: pociones_27
+  - first:
+      213: -1079737495392915609
+    second: pociones_28
+  - first:
+      213: 4054324464138547221
+    second: pociones_29
+  - first:
+      213: 2831409976276827631
+    second: pociones_30
+  - first:
+      213: 8347349401995630937
+    second: pociones_31
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -107,13 +182,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: virusRojos_0
+      name: pociones_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 350
-        width: 194
-        height: 200
+        x: 643
+        y: 211
+        width: 140
+        height: 173
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85ac50ae24293fce0800000000000000
-      internalID: -1372592645326124456
+      spriteID: 1e2a89b750a20b870800000000000000
+      internalID: 8696497083489231585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: virusRojos_1
+      name: pociones_2
       rect:
         serializedVersion: 2
-        x: 239
-        y: 349
-        width: 198
-        height: 200
+        x: 883
+        y: 241
+        width: 147
+        height: 196
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +217,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a946ee6f4d538e40800000000000000
-      internalID: 5657468152651860392
+      spriteID: f08f2facf83c86180800000000000000
+      internalID: -9121826022886279153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: virusRojos_2
+      name: pociones_4
       rect:
         serializedVersion: 2
-        x: 444
-        y: 345
-        width: 205
-        height: 210
+        x: 1145
+        y: 221
+        width: 183
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +238,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6fcb1126e158cf30800000000000000
-      internalID: 4596013468571389807
+      spriteID: 1e80abde943a11030800000000000000
+      internalID: 3463729126340954337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: virusRojos_3
+      name: pociones_12
       rect:
         serializedVersion: 2
-        x: 656
-        y: 342
-        width: 187
-        height: 212
+        x: 1433
+        y: 189
+        width: 189
+        height: 207
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +259,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57858568dbb2b1b70800000000000000
-      internalID: 8870731984039073909
+      spriteID: c3d6ebcd9ee2b3080800000000000000
+      internalID: -9206713431263122116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pociones_16
+      rect:
+        serializedVersion: 2
+        x: 1722
+        y: 253
+        width: 153
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc50b04835ca6440800000000000000
+      internalID: 4929969587504569521
       vertices: []
       indices: 
       edges: []
