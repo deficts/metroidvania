@@ -13,7 +13,7 @@ public class PlayerManager : MonoBehaviour
     public Text texto;
     public int puntuacion = 100;
     private Animator animator;
-    [SerializeField] LayerMask platformLayer,sueloLayer;
+    [SerializeField] LayerMask platformLayer;
     public Image damage;
     public Color damageColor=new Color(1f,0f,0f,0.1f);
     public float flashTime;
