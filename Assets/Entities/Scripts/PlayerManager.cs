@@ -11,7 +11,7 @@ public class PlayerManager : MonoBehaviour
     private float dirX;
     public float moveSpeed=5f;
     public Text texto;
-    public int puntuacion = 100;
+    public int vida = 100;
     private Animator animator;
     [SerializeField] LayerMask platformLayer;
     public Image damage;
@@ -22,7 +22,7 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
-        texto.text = "VIDA: "+puntuacion;
+        texto.text = "VIDA: "+vida;
         animator = GetComponent<Animator>();
         StartCoroutine(ReceiveDamage());
     }
@@ -37,7 +37,7 @@ public class PlayerManager : MonoBehaviour
             rb.AddForce(Vector2.up * 250);
             animator.SetBool("IsJumping", true);
         }
-        MecanismoVida(puntuacion);              //SIEMPRE LO REVISA
+        MecanismoVida(vida);              //SIEMPRE LO REVISA
         TurnPlayer();
     }
 
@@ -59,14 +59,14 @@ public class PlayerManager : MonoBehaviour
         if (collision.gameObject.CompareTag("Proyectil"))
         {
             //MECANISMO DE VIDA
-            puntuacion -= 10 ;
+            vida -= 10 ;
             damageTime = 1f;
         }
 
         if (collision.gameObject.CompareTag("Enemigo"))
         {
             //MECANISMO DE VIDA
-            puntuacion -= 20;
+            vida -= 20;
             damageTime = 1f;
         }
 
@@ -74,7 +74,7 @@ public class PlayerManager : MonoBehaviour
         {
             animator.SetBool("IsJumping", false);
         }
-        texto.text = "VIDA: "+puntuacion.ToString();
+        texto.text = "VIDA: "+vida.ToString();
 
         
     }
