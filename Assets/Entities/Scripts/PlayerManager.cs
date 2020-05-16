@@ -17,8 +17,7 @@ public class PlayerManager : MonoBehaviour
     public Image damage;
     public Color damageColor=new Color(1f,0f,0f,0.1f);
     public float flashTime;
-    private float damageTime=-1.0f;
-
+    private float damageTime = -1.0f;
 
     void Start()
     {
@@ -77,12 +76,21 @@ public class PlayerManager : MonoBehaviour
         }
         texto.text = "VIDA: "+puntuacion.ToString();
 
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "PowerUpDisparo")
+        {
+            GetComponent<DisparoPerrito>().enabled = true;
+            Destroy(collision.gameObject);
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision){
  
-     if(collision.gameObject.CompareTag("Plataforma"))
-        {
+    if(collision.gameObject.CompareTag("Plataforma")){
         this.transform.parent=null;
         }
     }
