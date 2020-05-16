@@ -11,7 +11,7 @@ public class PlayerManager : MonoBehaviour
     private float dirX;
     public float moveSpeed=5f;
     public Text texto;
-    public int puntuacion = 100;
+    public int vida = 100;
     private Animator animator;
     [SerializeField] LayerMask platformLayer;
     public Image damage;
@@ -23,15 +23,15 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
-        texto.text = "VIDA: "+puntuacion;
+        texto.text = "VIDA: "+vida;
         animator = GetComponent<Animator>();
         damage.color=Color.clear;
-    
+
     }
 
     void Update()
-    {   
-        
+    {
+
         dirX=Input.GetAxis("Horizontal")*moveSpeed;                 //MOVIMIENTO EN 2 DIRECCIONES
         float velocidad = Mathf.Abs(dirX*Time.deltaTime);
         animator.SetFloat("Velocidad", velocidad);
@@ -40,7 +40,7 @@ public class PlayerManager : MonoBehaviour
             rb.AddForce(Vector2.up * 250);
             animator.SetBool("IsJumping", true);
         }
-        MecanismoVida(puntuacion);              //SIEMPRE LO REVISA
+        MecanismoVida(vida);              //SIEMPRE LO REVISA
         TurnPlayer();
 
         if(damaged){
@@ -63,35 +63,36 @@ public class PlayerManager : MonoBehaviour
         }
 
         if (collision.gameObject.CompareTag("Proyectil"))
-        {            //MECANISMO DE VIDA
-            damaged=true;
-            puntuacion -= 10 ;
-        
+        {
+            //MECANISMO DE VIDA
+            vida -= 10 ;
+            damageTime = 1f;
         }
 
         if (collision.gameObject.CompareTag("Enemigo"))
-        {                   //MECANISMO DE VIDA
-            puntuacion -= 20;
-            damaged=true;
+        {
+            //MECANISMO DE VIDA
+            vida -= 20;
+            damageTime = 1f;
         }
 
         if (collision.gameObject.CompareTag("Suelo"))
         {
             animator.SetBool("IsJumping", false);
         }
-        texto.text = "VIDA: "+puntuacion.ToString();
+        texto.text = "VIDA: "+vida.ToString();
 
     }
 
     private void OnCollisionExit2D(Collision2D collision){
- 
+
      if(collision.gameObject.CompareTag("Plataforma"))
         {
         this.transform.parent=null;
         }
     }
 
-    public void MecanismoVida(int puntuacion){          //SE DETIENE EL JUEGO 
+    public void MecanismoVida(int puntuacion){          //SE DETIENE EL JUEGO
         if(puntuacion<=0){
             Time.timeScale = 0;
         }
