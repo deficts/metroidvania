@@ -19,14 +19,13 @@ public class PlayerManager : MonoBehaviour
     public Color fColor=new Color(1f,0f,0f,0.1f);
     bool damaged;
 
-
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
         texto.text = "VIDA: "+puntuacion;
         animator = GetComponent<Animator>();
         damage.color=Color.clear;
-    
+
     }
 
     void Update()
