@@ -15,20 +15,23 @@ public class PlayerManager : MonoBehaviour
     private Animator animator;
     [SerializeField] LayerMask platformLayer;
     public Image damage;
-    public Color damageColor=new Color(1f,0f,0f,0.1f);
-    public float flashTime;
-    private float damageTime = -1.0f;
+    public float flash=10f;
+    public Color fColor=new Color(1f,0f,0f,0.1f);
+    bool damaged;
+
 
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
         texto.text = "VIDA: "+puntuacion;
         animator = GetComponent<Animator>();
-        StartCoroutine(ReceiveDamage());
+        damage.color=Color.clear;
+    
     }
 
     void Update()
     {   
+        
         dirX=Input.GetAxis("Horizontal")*moveSpeed;                 //MOVIMIENTO EN 2 DIRECCIONES
         float velocidad = Mathf.Abs(dirX*Time.deltaTime);
         animator.SetFloat("Velocidad", velocidad);
@@ -39,35 +42,37 @@ public class PlayerManager : MonoBehaviour
         }
         MecanismoVida(puntuacion);              //SIEMPRE LO REVISA
         TurnPlayer();
+
+        if(damaged){
+            damage.color=fColor;
+        }else{
+            damage.color=Color.Lerp(damage.color,Color.clear,flash*Time.deltaTime);
+        }
+        damaged=false;
     }
 
     public void FixedUpdate(){
         rb.velocity=new Vector2(dirX,rb.velocity.y);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision){
-        //PERSONAJE SIGUE EL MOVIMIENTO DE LAS PLATAFORMAS
+    private void OnCollisionEnter2D(Collision2D collision){                 //PERSONAJE SIGUE EL MOVIMIENTO DE LAS PLATAFORMAS
         if(collision.gameObject.CompareTag("Plataforma"))
         {
-            if (IsGrounded())
-            {
-                animator.SetBool("IsJumping", false);
-            }
+            animator.SetBool("IsJumping", false);
             this.transform.parent=collision.transform;
         }
 
         if (collision.gameObject.CompareTag("Proyectil"))
-        {
-            //MECANISMO DE VIDA
+        {            //MECANISMO DE VIDA
+            damaged=true;
             puntuacion -= 10 ;
-            damageTime = 1f;
+        
         }
 
         if (collision.gameObject.CompareTag("Enemigo"))
-        {
-            //MECANISMO DE VIDA
+        {                   //MECANISMO DE VIDA
             puntuacion -= 20;
-            damageTime = 1f;
+            damaged=true;
         }
 
         if (collision.gameObject.CompareTag("Suelo"))
@@ -76,27 +81,17 @@ public class PlayerManager : MonoBehaviour
         }
         texto.text = "VIDA: "+puntuacion.ToString();
 
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.name == "PowerUpDisparo")
-        {
-            GetComponent<DisparoPerrito>().enabled = true;
-            Destroy(collision.gameObject);
-        }
     }
 
     private void OnCollisionExit2D(Collision2D collision){
  
-    if(collision.gameObject.CompareTag("Plataforma")){
+     if(collision.gameObject.CompareTag("Plataforma"))
+        {
         this.transform.parent=null;
         }
     }
 
-    public void MecanismoVida(int puntuacion){
-        //SE DETIENE EL JUEGO 
+    public void MecanismoVida(int puntuacion){          //SE DETIENE EL JUEGO 
         if(puntuacion<=0){
             Time.timeScale = 0;
         }
@@ -118,24 +113,6 @@ public class PlayerManager : MonoBehaviour
         }else if (dirX < 0)
         {
             transform.rotation = new Quaternion(transform.rotation.x/2, 180, transform.rotation.z/2,0);
-        }
-    }
-
-    IEnumerator ReceiveDamage()
-    {
-        while (true)
-        {
-            if (damageTime >= 0.0f)
-            {
-                print("damage");
-                damage.color = Color.Lerp(damageColor,Color.clear, Mathf.PingPong(Time.time, .5f));
-                damageTime -= Time.deltaTime;
-            }
-            else
-            {
-                damage.color = Color.clear;
-            }
-            yield return null;
         }
     }
 

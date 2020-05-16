@@ -7,9 +7,14 @@ public class MeleeAttack : MonoBehaviour
     public GameObject attackTrigger;
     Animator animator;
 
+    public AudioSource playerAudio;
+    public AudioClip[] clips;
+
+
     void Start()
     {
         animator = GetComponent<Animator>();
+        playerAudio=GetComponent<AudioSource>();
     }
 
     void Update()
@@ -18,6 +23,8 @@ public class MeleeAttack : MonoBehaviour
         {
             animator.SetBool("IsAttacking", true);
             attackTrigger.SetActive(true);
+            playerAudio.clip=clips[0];
+            playerAudio.Play();
         }
         if (Input.GetKeyUp(KeyCode.Z))
         {
