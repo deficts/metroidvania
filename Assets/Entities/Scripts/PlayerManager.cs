@@ -84,7 +84,9 @@ public class PlayerManager : MonoBehaviour
         if (collision.gameObject.name == "PowerUpDisparo")
         {
             GetComponent<DisparoPerrito>().enabled = true;
-            Destroy(collision.gameObject);
+            AudioSource audio = collision.gameObject.GetComponent<AudioSource>();
+            audio.PlayOneShot(audio.clip);
+            Destroy(collision.gameObject, 0.1f);
         }
     }
 

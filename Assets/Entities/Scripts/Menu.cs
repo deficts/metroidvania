@@ -5,11 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-  public void Play(){
-      SceneManager.LoadScene(1);
-  }
+    public void Play(){
+        SceneManager.LoadScene(1);
+    }
 
-  public void Quit(){
-      Application.Quit();
-  }
+    public void Quit(){
+         Application.Quit();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        SceneManager.LoadScene(2);
+    }
 }
