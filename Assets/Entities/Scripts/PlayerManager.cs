@@ -10,7 +10,7 @@ public class PlayerManager : MonoBehaviour
     private Rigidbody2D rb;
     private float dirX;
     public float moveSpeed=5f;
-    public Text texto;
+    //public Text texto;
     public int vida = 100;
     private Animator animator;
     [SerializeField] LayerMask platformLayer;
@@ -23,7 +23,7 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
-        texto.text = "VIDA: "+vida;
+        //texto.text = "VIDA: "+vida;
         animator = GetComponent<Animator>();
         StartCoroutine(ReceiveDamage());
     }
@@ -60,14 +60,20 @@ public class PlayerManager : MonoBehaviour
         if (collision.gameObject.CompareTag("Proyectil"))
         {
             //MECANISMO DE VIDA
-            vida -= 10 ;
+            vida -= 5 ;
             damageTime = 1f;
         }
 
         if (collision.gameObject.CompareTag("Enemigo"))
         {
             //MECANISMO DE VIDA
-            vida -= 20;
+            vida -= 5;
+            damageTime = 1f;
+        }
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            //MECANISMO DE VIDA
+            vida -= 5;
             damageTime = 1f;
         }
 
@@ -75,7 +81,7 @@ public class PlayerManager : MonoBehaviour
         {
             animator.SetBool("IsJumping", false);
         }
-        texto.text = "VIDA: "+vida.ToString();
+        //texto.text = "VIDA: "+vida.ToString();
 
         
     }
@@ -141,9 +147,4 @@ public class PlayerManager : MonoBehaviour
             yield return null;
         }
     }
-
-   /*public int getVida(){
-        return this.vida;
-    }*/
-
 }

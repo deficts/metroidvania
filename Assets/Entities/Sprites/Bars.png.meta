@@ -8,6 +8,9 @@ TextureImporter:
   - first:
       213: -8943384616410183079
     second: bar_empty
+  - first:
+      213: 8946086848452442017
+    second: bar_boss
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -153,6 +156,27 @@ TextureImporter:
       bones: []
       spriteID: 95a8d215317b2e380800000000000000
       internalID: -8943384616410183079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bar_boss
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 344
+        width: 512
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a73dcb1792e62c70800000000000000
+      internalID: 8946086848452442017
       vertices: []
       indices: 
       edges: []
