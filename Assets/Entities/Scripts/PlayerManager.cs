@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class PlayerManager : MonoBehaviour
     public float flashTime;
     private float damageTime = -1.0f;
     private int b=3;
+    private Menu objeto;
     
     public GameObject botella;
     void Start()
@@ -111,7 +113,7 @@ public class PlayerManager : MonoBehaviour
     public void MecanismoVida(int puntuacion){
         //SE DETIENE EL JUEGO 
         if(puntuacion<=0){
-            Time.timeScale = 0;
+            SceneManager.LoadScene(3);
         }
     }
 
