@@ -19,6 +19,7 @@ public class PlayerManager : MonoBehaviour
     public float flashTime;
     private float damageTime = -1.0f;
 
+
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
@@ -140,5 +141,9 @@ public class PlayerManager : MonoBehaviour
             yield return null;
         }
     }
+
+   /*public int getVida(){
+        return this.vida;
+    }*/
 
 }
