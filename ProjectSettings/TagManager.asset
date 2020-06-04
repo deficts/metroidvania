@@ -11,7 +11,11 @@ TagManager:
   - Suelo
   - Melee
   - ProyectilPerrito
+<<<<<<< HEAD
   - Boss
+=======
+  - Botella
+>>>>>>> 52d827d3649de660f91e9f24cc004ea0d2491f0e
   layers:
   - Default
   - TransparentFX

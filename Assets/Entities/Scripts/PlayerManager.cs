@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -18,14 +19,23 @@ public class PlayerManager : MonoBehaviour
     public Color damageColor=new Color(1f,0f,0f,0.1f);
     public float flashTime;
     private float damageTime = -1.0f;
+<<<<<<< HEAD
 
 
+=======
+    private int b=3;
+    private Menu objeto;
+    
+    public GameObject botella;
+>>>>>>> 52d827d3649de660f91e9f24cc004ea0d2491f0e
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
         //texto.text = "VIDA: "+vida;
         animator = GetComponent<Animator>();
         StartCoroutine(ReceiveDamage());
+        
+        botella=GameObject.Find("SpriteBotella");
     }
 
     void Update()
@@ -83,7 +93,13 @@ public class PlayerManager : MonoBehaviour
         }
         //texto.text = "VIDA: "+vida.ToString();
 
-        
+        if (collision.gameObject.tag == "Botella")
+        {
+            Destroy(collision.gameObject);
+            b--;
+            botella.SendMessage("cambioBotella",b);
+            
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -95,6 +111,7 @@ public class PlayerManager : MonoBehaviour
             audio.PlayOneShot(audio.clip);
             Destroy(collision.gameObject, 0.1f);
         }
+
     }
 
     private void OnCollisionExit2D(Collision2D collision){
@@ -107,7 +124,7 @@ public class PlayerManager : MonoBehaviour
     public void MecanismoVida(int puntuacion){
         //SE DETIENE EL JUEGO 
         if(puntuacion<=0){
-            Time.timeScale = 0;
+            SceneManager.LoadScene(3);
         }
     }
 
@@ -146,5 +163,10 @@ public class PlayerManager : MonoBehaviour
             }
             yield return null;
         }
+<<<<<<< HEAD
     }
+=======
+    }  
+
+>>>>>>> 52d827d3649de660f91e9f24cc004ea0d2491f0e
 }
