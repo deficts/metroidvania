@@ -11,7 +11,7 @@ public class PlayerManager : MonoBehaviour
     private Rigidbody2D rb;
     private float dirX;
     public float moveSpeed=5f;
-    public Text texto;
+    //public Text texto;
     public int vida = 100;
     private Animator animator;
     [SerializeField] LayerMask platformLayer;
@@ -19,14 +19,19 @@ public class PlayerManager : MonoBehaviour
     public Color damageColor=new Color(1f,0f,0f,0.1f);
     public float flashTime;
     private float damageTime = -1.0f;
+<<<<<<< HEAD
+
+
+=======
     private int b=3;
     private Menu objeto;
     
     public GameObject botella;
+>>>>>>> 52d827d3649de660f91e9f24cc004ea0d2491f0e
     void Start()
     {
         rb=GetComponent<Rigidbody2D>();
-        texto.text = "VIDA: "+vida;
+        //texto.text = "VIDA: "+vida;
         animator = GetComponent<Animator>();
         StartCoroutine(ReceiveDamage());
         
@@ -65,14 +70,20 @@ public class PlayerManager : MonoBehaviour
         if (collision.gameObject.CompareTag("Proyectil"))
         {
             //MECANISMO DE VIDA
-            vida -= 10 ;
+            vida -= 5 ;
             damageTime = 1f;
         }
 
         if (collision.gameObject.CompareTag("Enemigo"))
         {
             //MECANISMO DE VIDA
-            vida -= 20;
+            vida -= 5;
+            damageTime = 1f;
+        }
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            //MECANISMO DE VIDA
+            vida -= 5;
             damageTime = 1f;
         }
 
@@ -80,7 +91,7 @@ public class PlayerManager : MonoBehaviour
         {
             animator.SetBool("IsJumping", false);
         }
-        texto.text = "VIDA: "+vida.ToString();
+        //texto.text = "VIDA: "+vida.ToString();
 
         if (collision.gameObject.tag == "Botella")
         {
@@ -152,6 +163,10 @@ public class PlayerManager : MonoBehaviour
             }
             yield return null;
         }
+<<<<<<< HEAD
+    }
+=======
     }  
 
+>>>>>>> 52d827d3649de660f91e9f24cc004ea0d2491f0e
 }
