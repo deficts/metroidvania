@@ -255,8 +255,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: 149}
-  m_SizeDelta: {x: 107.8, y: 30.8}
+  m_AnchoredPosition: {x: 0.000030518, y: 340}
+  m_SizeDelta: {x: 377, y: 107.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &163455017
 MonoBehaviour:
@@ -40663,11 +40663,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 69, y: -47}
-=======
   m_AnchoredPosition: {x: -12.9, y: 17}
->>>>>>> 52d827d3649de660f91e9f24cc004ea0d2491f0e
   m_SizeDelta: {x: 1534, y: 863.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &267187856
@@ -41089,7 +41085,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &607351911
 CapsuleCollider2D:
@@ -41432,7 +41428,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  texto: {fileID: 1313819554}
   vida: 100
   platformLayer:
     serializedVersion: 2
@@ -41468,11 +41463,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670623343}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD
-  m_LocalPosition: {x: -0.29, y: -2.66, z: 0}
-=======
   m_LocalPosition: {x: 23.5, y: 24.2, z: 0}
->>>>>>> 52d827d3649de660f91e9f24cc004ea0d2491f0e
   m_LocalScale: {x: 1.283, y: 1.283, z: 1.283}
   m_Children:
   - {fileID: 2007016664}
@@ -43812,7 +43803,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &1308857349
 CapsuleCollider2D:
@@ -45346,8 +45337,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 53.3, y: 12.8}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 213, y: 41}
+  m_SizeDelta: {x: 349.1, y: 349.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1661012755
 MonoBehaviour:
@@ -46519,7 +46510,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &2054471061
 CapsuleCollider2D:
@@ -46713,7 +46704,7 @@ RectTransform:
   m_Children:
   - {fileID: 1661012754}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
