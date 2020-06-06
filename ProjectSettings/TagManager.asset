@@ -4,18 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Plataforma
-  - Proyectil
-  - Enemigo
-  - Malo
-  - Suelo
   - Melee
-  - ProyectilPerrito
-<<<<<<< HEAD
+  - Suelo
   - Boss
-=======
+  - ProyectilPerrito
   - Botella
->>>>>>> 52d827d3649de660f91e9f24cc004ea0d2491f0e
+  - Plataforma
+  - Enemigo
+  - Proyectil
   layers:
   - Default
   - TransparentFX
@@ -25,11 +21,11 @@ TagManager:
   - UI
   - 
   - 
-  - Proyectiles
-  - Enemigos
-  - Plataformas
-  - Suelo
-  - ProyectilPerrito
+  - plataformas
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

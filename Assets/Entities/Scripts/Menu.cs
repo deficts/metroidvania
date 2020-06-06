@@ -20,6 +20,8 @@ public class Menu : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        SceneManager.LoadScene(2);
+        if (collision.gameObject.CompareTag("Player")){
+            SceneManager.LoadScene(2);
+        }
     }
 }
