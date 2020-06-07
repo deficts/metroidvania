@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 175944054}
   m_Layer: 8
   m_Name: Paredes
-  m_TagString: Suelo
+  m_TagString: Plataforma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41042,7 +41042,7 @@ GameObject:
   - component: {fileID: 779205700}
   m_Layer: 8
   m_Name: Encerrar
-  m_TagString: Untagged
+  m_TagString: Plataforma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41277,7 +41277,7 @@ GameObject:
   - component: {fileID: 802825352}
   m_Layer: 8
   m_Name: CartelDisparo
-  m_TagString: Untagged
+  m_TagString: Plataforma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42225,7 +42225,7 @@ GameObject:
   - component: {fileID: 1148111973}
   m_Layer: 8
   m_Name: Objetos
-  m_TagString: Untagged
+  m_TagString: Plataforma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44160,7 +44160,7 @@ GameObject:
   - component: {fileID: 1722074022}
   m_Layer: 8
   m_Name: Caja
-  m_TagString: Suelo
+  m_TagString: Plataforma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45772,7 +45772,7 @@ PrefabInstance:
     - target: {fileID: 4410758707745210670, guid: e720016aac9ef4a988eb87f9f9c4fe0b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4410758707745210706, guid: e720016aac9ef4a988eb87f9f9c4fe0b,
         type: 3}
