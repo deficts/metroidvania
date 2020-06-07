@@ -1044,7 +1044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 179}
+  m_AnchoredPosition: {x: -10, y: 163}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1320405907
@@ -1097,6 +1097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bar: {fileID: 1585792143}
+  boss: {fileID: 2001294149}
 --- !u!1 &1540083739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,6 +1109,7 @@ GameObject:
   - component: {fileID: 1540083740}
   - component: {fileID: 1540083742}
   - component: {fileID: 1540083741}
+  - component: {fileID: 1540083743}
   m_Layer: 5
   m_Name: Damage
   m_TagString: Untagged
@@ -1170,6 +1172,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540083739}
   m_CullTransparentMesh: 0
+--- !u!95 &1540083743
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540083739}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b5db6f76096294c838f4fb50d59cf9b1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1585792141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,10 +1248,10 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 8946086848452442017, guid: 93b2ff5cc6ee1458b9bbab0b6c4ee7fb,
     type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -1258,7 +1279,7 @@ GameObject:
   - component: {fileID: 1639576643}
   - component: {fileID: 1639576642}
   m_Layer: 10
-  m_Name: Paredes
+  m_Name: Suelo
   m_TagString: Suelo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41731,6 +41752,7 @@ GameObject:
   - component: {fileID: 2001294146}
   - component: {fileID: 2001294148}
   - component: {fileID: 2001294149}
+  - component: {fileID: 2001294150}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -41796,7 +41818,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001294145}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.6, y: 1.38, z: 0}
+  m_LocalPosition: {x: 4.6, y: -0.35, z: 0}
   m_LocalScale: {x: 2.4818504, y: 2.4818504, z: 2.4818504}
   m_Children: []
   m_Father: {fileID: 0}
@@ -41837,6 +41859,19 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2001294146}
   stageTwo: {fileID: -4659112463564760050, guid: b58e6f296e1250b44a9bc445ba2a5e37,
     type: 3}
+--- !u!65 &2001294150
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001294145}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.96, y: 1.95, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2146558574
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,14 +40,13 @@ public class Boss : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-     
-        if (other.CompareTag("Player") && isDead == false) {
-            if (timeDamage <= 0) {
-                other.GetComponent<PlayerManager>().vida -= 1;
-            }
-        } 
+    private void OnCollisionEnter2D(Collision2D collision){
+         if (collision.gameObject.CompareTag("Player"))
+        {
+            //MECANISMO DE VIDA
+            vida -= 1;
+            timeDamage = 1f;
+        }
     }
 
     void ChangeSprite()
