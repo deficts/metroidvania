@@ -25,7 +25,7 @@ public class Boss : MonoBehaviour
     private void Update()
     {
 
-        if (vida <= 25) {
+        if (vida <= 25.0f) {
             anim.SetTrigger("stageTwo");
             ChangeSprite();
         }
@@ -34,7 +34,7 @@ public class Boss : MonoBehaviour
             anim.SetTrigger("death");
         }
 
-        // Para que se recupere un poco antes de recibbir más daño
+        // Para que se recupere un poco antes de recibir más daño
         if (timeDamage > 0) {
             timeDamage -= Time.deltaTime;
         }
@@ -45,6 +45,11 @@ public class Boss : MonoBehaviour
         {
             //MECANISMO DE VIDA
             vida -= 1;
+            timeDamage = 1f;
+        }
+        if (collision.gameObject.CompareTag("ProyectilPerrito"))
+        {
+            vida -= 3;
             timeDamage = 1f;
         }
     }

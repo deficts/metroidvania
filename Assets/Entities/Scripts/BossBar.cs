@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class BossBar : MonoBehaviour
 {
     // Start is called before the first frame update
-  public Image Bar;
+    public Image Bar;
     public Boss boss;
     private float vidaBarra;
     

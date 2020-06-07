@@ -19,6 +19,15 @@ public class PlayerManager : MonoBehaviour
     public Color damageColor=new Color(1f,0f,0f,0.1f);
     public float flashTime;
     private float damageTime = -1.0f;
+    private int b=3;
+    private Menu objeto;
+    public GameObject botella;
+    public bool jumpPowerUp= true;
+    private bool doubleJump;
+    public bool invencible;
+
+    static private int botellas=0;
+    private float invincibilityTime=10;
 
     void Start()
     {
@@ -27,18 +36,34 @@ public class PlayerManager : MonoBehaviour
         animator = GetComponent<Animator>();
         StartCoroutine(ReceiveDamage());
         
-        
+        botella=GameObject.Find("SpriteBotella");
     }
 
     void Update()
-    {   
-        dirX=Input.GetAxis("Horizontal")*moveSpeed;                 //MOVIMIENTO EN 2 DIRECCIONES
+    {
+        dirX =Input.GetAxis("Horizontal")*moveSpeed;                 //MOVIMIENTO EN 2 DIRECCIONES
         float velocidad = Mathf.Abs(dirX*Time.deltaTime);
         animator.SetFloat("Velocidad", velocidad);
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump"))
         {
-            rb.AddForce(Vector2.up * 250);
-            animator.SetBool("IsJumping", true);
+            if (IsGrounded())
+            {
+                rb.AddForce(Vector2.up * 250);
+                animator.SetBool("IsJumping", true);
+                if (jumpPowerUp)
+                {
+                    doubleJump = true;
+                }
+            }
+            else
+            {
+                if (doubleJump)
+                {
+                    rb.AddForce(Vector2.up * 250);
+                    animator.SetBool("IsJumping", true);
+                    doubleJump = false;
+                }
+            }
         }
         MecanismoVida(vida);              //SIEMPRE LO REVISA
         TurnPlayer();
@@ -59,37 +84,42 @@ public class PlayerManager : MonoBehaviour
             this.transform.parent=collision.transform;
         }
 
-        if (collision.gameObject.CompareTag("Proyectil"))
-        {
-            //MECANISMO DE VIDA
-            vida -= 5 ;
-            damageTime = 1f;
-        }
-
-        if (collision.gameObject.CompareTag("Enemigo"))
-        {
-            //MECANISMO DE VIDA
-            vida -= 5;
-            damageTime = 1f;
-        }
-        if (collision.gameObject.CompareTag("Boss"))
-        {
-            //MECANISMO DE VIDA
-            vida -= 10;
-            damageTime = 1f;
-        }
-
-        if (collision.gameObject.CompareTag("Suelo"))
-        {
-            animator.SetBool("IsJumping", false);
-        }
-        //texto.text = "VIDA: "+vida.ToString();
-
         if (collision.gameObject.tag == "Botella")
         {
+            botellas += 1;
+            print(botellas);
             Destroy(collision.gameObject);
-           
+            b--;
+            botella.SendMessage("cambioBotella",b);
             
+        }
+
+        if (!invencible)
+        {
+            if (collision.gameObject.tag == "Invencible")
+            {
+                Destroy(collision.gameObject);
+                StartCoroutine(Invencibilidad());
+            }
+            if (collision.gameObject.CompareTag("Proyectil"))
+            {
+                //MECANISMO DE VIDA
+                vida -= 5;
+                damageTime = 1f;
+            }
+
+            if (collision.gameObject.CompareTag("Enemigo"))
+            {
+                //MECANISMO DE VIDA
+                vida -= 5;
+                damageTime = 1f;
+            }
+            if (collision.gameObject.CompareTag("Boss"))
+            {
+                //MECANISMO DE VIDA
+                vida -= 5;
+                damageTime = 1f;
+            }
         }
     }
 
@@ -102,7 +132,22 @@ public class PlayerManager : MonoBehaviour
             audio.PlayOneShot(audio.clip);
             Destroy(collision.gameObject, 0.1f);
         }
+        if(collision.gameObject.name == "PowerUpSalto")
+        {
+            this.jumpPowerUp = true;
+            AudioSource audio = collision.gameObject.GetComponent<AudioSource>();
+            audio.PlayOneShot(audio.clip);
+            Destroy(collision.gameObject, 0.1f);
+        }
 
+        if (!invencible)
+        {
+            if (collision.gameObject.name == "Invencible")
+            {
+                Destroy(collision.gameObject, 0.1f);
+                StartCoroutine(Invencibilidad());
+            }
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision){
@@ -144,7 +189,6 @@ public class PlayerManager : MonoBehaviour
         {
             if (damageTime >= 0.0f)
             {
-                print("damage");
                 damage.color = Color.Lerp(damageColor,Color.clear, Mathf.PingPong(Time.time, .5f));
                 damageTime -= Time.deltaTime;
             }
@@ -153,6 +197,26 @@ public class PlayerManager : MonoBehaviour
                 damage.color = Color.clear;
             }
             yield return null;
+        }
+    }
+
+    IEnumerator Invencibilidad()
+    {
+        invencible = true;
+        StartCoroutine(ColorInvencible());
+
+        yield return new WaitForSeconds(invincibilityTime);
+        GetComponent<SpriteRenderer>().color = Color.white;
+        invencible = false;
+    }
+
+    IEnumerator ColorInvencible()
+    {
+        while (invencible)
+        {
+            Color targetColor = new Color(Random.value, Random.value, Random.value);
+            GetComponent<SpriteRenderer>().color = Color.Lerp(GetComponent<SpriteRenderer>().color, targetColor, Mathf.PingPong(Time.time, .5f));
+            yield return new WaitForSeconds(.1f);
         }
     }
 }
