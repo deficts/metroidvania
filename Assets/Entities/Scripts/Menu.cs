@@ -20,8 +20,8 @@ public class Menu : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player")){
-            SceneManager.LoadScene(2);
+        if (collision.gameObject.CompareTag("Player") && PlayerManager.botellas==3){
+            SceneManager.LoadScene("SecondLevel");
         }
     }
 }

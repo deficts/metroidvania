@@ -18,11 +18,11 @@ EditorBuildSettings:
     path: Assets/Scenes/SecondLevel.unity
     guid: 3952faf74b68e4ca39e3ef783b989332
   - enabled: 1
-    path: Assets/Scenes/Lose.unity
-    guid: 6d6faab99a7920e429ec95eef11bb541
-  - enabled: 1
     path: Assets/Scenes/End.unity
     guid: ad6ec697a7e2b8643b3523093abd707c
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
+    guid: 6d6faab99a7920e429ec95eef11bb541
   - enabled: 1
     path: Assets/Scenes/FinalBoss.unity
     guid: ce9a4f51c43b7469fbee5dd0d2fe5eeb

@@ -245,6 +245,8 @@ MonoBehaviour:
   damageColor: {r: 1, g: 0, b: 0, a: 0.1}
   flashTime: 0
   botella: {fileID: 0}
+  jumpPowerUp: 1
+  invencible: 0
 --- !u!212 &3867008825782617610
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -354,7 +356,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3867008825782617616}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0

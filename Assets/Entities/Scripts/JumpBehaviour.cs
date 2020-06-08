@@ -5,12 +5,10 @@ using UnityEngine;
 public class JumpBehaviour : StateMachineBehaviour
 {
     private float timer;
-  public float minTime,maxTime,speed;
-  private Transform playerPos;
+    public float minTime, maxTime;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerPos=GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         timer=Random.Range(minTime,maxTime);    
     }
 
@@ -24,8 +22,6 @@ public class JumpBehaviour : StateMachineBehaviour
             timer-=Time.deltaTime; 
         }
         
-        Vector2 target=new Vector2(playerPos.position.x,animator.transform.position.y);
-        animator.transform.position=Vector2.MoveTowards(animator.transform.position,target,speed*Time.deltaTime);
     }
 
     

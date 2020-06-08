@@ -5,23 +5,24 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public enum nivel
     {
-        
+        boss,
+        second
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public nivel currentNivel;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && PlayerManager.botellas==6 && currentNivel==nivel.second)
         {
             SceneManager.LoadScene("FinalBoss");
+        }
+
+        if (collision.gameObject.CompareTag("Player") && currentNivel == nivel.boss)
+        {
+            SceneManager.LoadScene("End");
         }
     }
 }

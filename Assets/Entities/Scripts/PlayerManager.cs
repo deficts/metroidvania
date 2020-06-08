@@ -26,7 +26,7 @@ public class PlayerManager : MonoBehaviour
     private bool doubleJump;
     public bool invencible;
 
-    static private int botellas=0;
+    static public int botellas=0;
     private float invincibilityTime=10;
 
     void Start()
@@ -76,12 +76,13 @@ public class PlayerManager : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision){
         //PERSONAJE SIGUE EL MOVIMIENTO DE LAS PLATAFORMAS
         if(collision.gameObject.CompareTag("Plataforma"))
-        {
-            if (IsGrounded())
-            {
-                animator.SetBool("IsJumping", false);
-            }
+        {  
             this.transform.parent=collision.transform;
+        }
+
+        if (IsGrounded())
+        {
+            animator.SetBool("IsJumping", false);
         }
 
         if (collision.gameObject.tag == "Botella")
@@ -160,7 +161,15 @@ public class PlayerManager : MonoBehaviour
     public void MecanismoVida(int puntuacion){
         //SE DETIENE EL JUEGO 
         if(puntuacion<=0){
-            SceneManager.LoadScene(3);
+            if (botellas<6)
+            {
+                botellas = 0;
+                SceneManager.LoadScene("Lose");
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
     }
 
