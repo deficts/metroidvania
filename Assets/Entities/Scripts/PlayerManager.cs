@@ -140,6 +140,10 @@ public class PlayerManager : MonoBehaviour
             audio.PlayOneShot(audio.clip);
             Destroy(collision.gameObject, 0.1f);
         }
+        if (collision.gameObject.name == "Void")
+        {
+            this.vida = 0;
+        }
 
         if (!invencible)
         {
